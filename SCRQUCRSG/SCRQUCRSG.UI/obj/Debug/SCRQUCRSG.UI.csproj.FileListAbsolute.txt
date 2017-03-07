@@ -14,3 +14,7 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUC
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.frmLogin.resources
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.frmPrincipal.resources
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Usuarios.frmMantenimientoUsuarios.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Usuarios.frmCorreoUsuario.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Usuarios.frmEditarUsuario.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Usuarios.frmNuevoUsuario.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Usuarios.frmTelefonoUsuario.resources

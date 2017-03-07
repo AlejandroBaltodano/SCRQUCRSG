@@ -108,9 +108,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios\frmCorreoUsuario.resx">
+      <DependentUpon>frmCorreoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmEditarUsuario.resx">
+      <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmMantenimientoUsuarios.resx">
       <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmNuevoUsuario.resx">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmTelefonoUsuario.resx">
+      <DependentUpon>frmTelefonoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -135,6 +148,27 @@
       <Project>{3f39c659-9e92-4fd1-9a38-6b3c387e11f6}</Project>
       <Name>SCRQUCRSG.MODEL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16_h.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
