@@ -81,6 +81,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCRQUCRSG.ACCESOADATOS\SCRQUCRSG.ACCESOADATOS.csproj">
+      <Project>{694f74ea-003a-4070-baec-796d996491a0}</Project>
+      <Name>SCRQUCRSG.ACCESOADATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCRQUCRSG.MODEL\SCRQUCRSG.MODEL.csproj">
+      <Project>{3f39c659-9e92-4fd1-9a38-6b3c387e11f6}</Project>
+      <Name>SCRQUCRSG.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

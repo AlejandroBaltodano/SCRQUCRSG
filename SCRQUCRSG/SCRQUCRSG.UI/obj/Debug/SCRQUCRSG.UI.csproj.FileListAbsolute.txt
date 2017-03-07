@@ -6,3 +6,8 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUC
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.exe
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.pdb
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.ACCESOADATOS.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.MODEL.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.ACCESOADATOS.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.MODEL.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.csprojResolveAssemblyReference.cache
