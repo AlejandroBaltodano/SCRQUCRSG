@@ -1,0 +1,8 @@
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.UI.exe.config
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.UI.exe
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.UI.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.csprojResolveAssemblyReference.cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.Properties.Resources.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.csproj.GenerateResource.Cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.exe
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.pdb
