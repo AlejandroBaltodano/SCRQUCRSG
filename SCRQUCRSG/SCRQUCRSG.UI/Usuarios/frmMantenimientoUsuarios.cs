@@ -12,9 +12,17 @@ namespace SCRQUCRSG.UI.Usuarios
 {
     public partial class frmMantenimientoUsuarios : Form
     {
-        public frmMantenimientoUsuarios()
+        MODEL.Usuario usuario;
+        public frmMantenimientoUsuarios(MODEL.Usuario usuarioRegistrado)
         {
+            usuario = usuarioRegistrado;
             InitializeComponent();
+        }
+
+        private void frmMantenimientoUsuarios_Load(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
