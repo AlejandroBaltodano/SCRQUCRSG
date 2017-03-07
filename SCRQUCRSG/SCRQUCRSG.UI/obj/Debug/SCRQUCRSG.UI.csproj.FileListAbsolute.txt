@@ -11,3 +11,5 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUC
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.ACCESOADATOS.pdb
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug\SCRQUCRSG.MODEL.pdb
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.csprojResolveAssemblyReference.cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.frmLogin.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.UI\obj\Debug\SCRQUCRSG.UI.frmPrincipal.resources

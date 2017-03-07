@@ -2,3 +2,4 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUC
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.MODEL\bin\Debug\SCRQUCRSG.MODEL.pdb
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.MODEL\obj\Debug\SCRQUCRSG.MODEL.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.MODEL\obj\Debug\SCRQUCRSG.MODEL.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.MODEL\obj\Debug\SCRQUCRSG.MODEL.csprojResolveAssemblyReference.cache
