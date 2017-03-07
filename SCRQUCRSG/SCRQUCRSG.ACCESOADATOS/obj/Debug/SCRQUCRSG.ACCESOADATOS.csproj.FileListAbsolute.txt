@@ -3,3 +3,5 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUC
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.ACCESOADATOS\obj\Debug\SCRQUCRSG.ACCESOADATOS.csprojResolveAssemblyReference.cache
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.ACCESOADATOS\obj\Debug\SCRQUCRSG.ACCESOADATOS.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.ACCESOADATOS\obj\Debug\SCRQUCRSG.ACCESOADATOS.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.ACCESOADATOS\bin\Debug\SCRQUCRSG.ACCESOADATOS.dll.config
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG\SCRQUCRSG.ACCESOADATOS\bin\Debug\Oracle.ManagedDataAccess.dll
