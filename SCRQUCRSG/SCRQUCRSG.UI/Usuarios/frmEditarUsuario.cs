@@ -161,8 +161,8 @@ namespace SCRQUCRSG.UI.Usuarios
       MessageBoxButtons.YesNo, MessageBoxIcon.Question)
       == DialogResult.Yes)
                 {
-                    String query = " begin" +
-             " ELIMINARUNUSUARIO('" + IdUsuarioEditar + "');" +
+                    String query = " begin " +
+             " ELIMINARUNUSUARIO(" + IdUsuarioEditar + ");" +
                             " end; ";
                     conexion.OperacionDML(query);
 

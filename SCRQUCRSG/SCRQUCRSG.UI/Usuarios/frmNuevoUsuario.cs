@@ -23,6 +23,7 @@ namespace SCRQUCRSG.UI.Usuarios
         private void frmNuevoUsuario_Load(object sender, EventArgs e)
         {
             SeleccionarPrimero();
+            llenarComboBoxRoles();
         }
 
         public void SeleccionarPrimero()

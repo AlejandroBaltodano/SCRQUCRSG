@@ -22,6 +22,7 @@ namespace SCRQUCRSG.UI.Usuarios
         private void frmMantenimientoUsuarios_Load(object sender, EventArgs e)
         {
             SeleccionarPrimero();
+            LlenarGridUsuarios();
 
         }
         public void SeleccionarPrimero()
