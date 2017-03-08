@@ -1,6 +1,6 @@
 ﻿namespace SCRQUCRSG.UI.Reportes.FramesReportes
 {
-    partial class frmReporteUsuarios
+    partial class frmReporteTodosUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -30,29 +30,53 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteUsuarios));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteTodosUsuarios));
+            this.tABLACORREOUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetMigracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetMigracion = new SCRQUCRSG.UI.DataSetMigracion();
+            this.tABLATELEFONOUSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetMigracion = new SCRQUCRSG.UI.DataSetMigracion();
-            this.dataSetMigracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultaUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultaUsuariosTableAdapter = new SCRQUCRSG.UI.DataSetMigracionTableAdapters.ConsultaUsuariosTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracion)).BeginInit();
+            this.tABLA_CORREO_USUARIOTableAdapter = new SCRQUCRSG.UI.DataSetMigracionTableAdapters.TABLA_CORREO_USUARIOTableAdapter();
+            this.tABLA_TELEFONO_USUARIOSTableAdapter = new SCRQUCRSG.UI.DataSetMigracionTableAdapters.TABLA_TELEFONO_USUARIOSTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tABLACORREOUSUARIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaUsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABLATELEFONOUSUARIOSBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tABLACORREOUSUARIOBindingSource
+            // 
+            this.tABLACORREOUSUARIOBindingSource.DataMember = "TABLA_CORREO_USUARIO";
+            this.tABLACORREOUSUARIOBindingSource.DataSource = this.dataSetMigracionBindingSource;
+            // 
+            // dataSetMigracionBindingSource
+            // 
+            this.dataSetMigracionBindingSource.DataSource = this.dataSetMigracion;
+            this.dataSetMigracionBindingSource.Position = 0;
+            // 
+            // dataSetMigracion
+            // 
+            this.dataSetMigracion.DataSetName = "DataSetMigracion";
+            this.dataSetMigracion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tABLATELEFONOUSUARIOSBindingSource
+            // 
+            this.tABLATELEFONOUSUARIOSBindingSource.DataMember = "TABLA_TELEFONO_USUARIOS";
+            this.tABLATELEFONOUSUARIOSBindingSource.DataSource = this.dataSetMigracionBindingSource;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 353);
+            this.panel1.Location = new System.Drawing.Point(0, 397);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 49);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(668, 49);
+            this.panel1.TabIndex = 1;
             // 
             // btnRegresar
             // 
@@ -71,54 +95,46 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetUsuarios";
-            reportDataSource1.Value = this.consultaUsuariosBindingSource;
+            reportDataSource1.Name = "DataSetCorreos";
+            reportDataSource1.Value = this.tABLACORREOUSUARIOBindingSource;
+            reportDataSource2.Name = "DataSetTelefonos";
+            reportDataSource2.Value = this.tABLATELEFONOUSUARIOSBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SCRQUCRSG.UI.Reportes.Informes.ReporteUsuarios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(660, 353);
-            this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.Size = new System.Drawing.Size(668, 397);
+            this.reportViewer1.TabIndex = 2;
             // 
-            // dataSetMigracion
+            // tABLA_CORREO_USUARIOTableAdapter
             // 
-            this.dataSetMigracion.DataSetName = "DataSetMigracion";
-            this.dataSetMigracion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tABLA_CORREO_USUARIOTableAdapter.ClearBeforeFill = true;
             // 
-            // dataSetMigracionBindingSource
+            // tABLA_TELEFONO_USUARIOSTableAdapter
             // 
-            this.dataSetMigracionBindingSource.DataSource = this.dataSetMigracion;
-            this.dataSetMigracionBindingSource.Position = 0;
+            this.tABLA_TELEFONO_USUARIOSTableAdapter.ClearBeforeFill = true;
             // 
-            // consultaUsuariosBindingSource
-            // 
-            this.consultaUsuariosBindingSource.DataMember = "ConsultaUsuarios";
-            this.consultaUsuariosBindingSource.DataSource = this.dataSetMigracionBindingSource;
-            // 
-            // consultaUsuariosTableAdapter
-            // 
-            this.consultaUsuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // frmReporteUsuarios
+            // frmReporteTodosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(660, 402);
+            this.ClientSize = new System.Drawing.Size(668, 446);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmReporteUsuarios";
+            this.Name = "frmReporteTodosUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Usuarios";
-            this.Load += new System.EventHandler(this.frmReporteUsuarios_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracion)).EndInit();
+            this.Load += new System.EventHandler(this.frmReporteTodosUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tABLACORREOUSUARIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaUsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetMigracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABLATELEFONOUSUARIOSBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -128,9 +144,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegresar;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource dataSetMigracionBindingSource;
         private DataSetMigracion dataSetMigracion;
-        private System.Windows.Forms.BindingSource consultaUsuariosBindingSource;
-        private DataSetMigracionTableAdapters.ConsultaUsuariosTableAdapter consultaUsuariosTableAdapter;
+        private System.Windows.Forms.BindingSource dataSetMigracionBindingSource;
+        private System.Windows.Forms.BindingSource tABLACORREOUSUARIOBindingSource;
+        private DataSetMigracionTableAdapters.TABLA_CORREO_USUARIOTableAdapter tABLA_CORREO_USUARIOTableAdapter;
+        private System.Windows.Forms.BindingSource tABLATELEFONOUSUARIOSBindingSource;
+        private DataSetMigracionTableAdapters.TABLA_TELEFONO_USUARIOSTableAdapter tABLA_TELEFONO_USUARIOSTableAdapter;
     }
 }

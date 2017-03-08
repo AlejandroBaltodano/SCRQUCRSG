@@ -32,15 +32,9 @@ namespace SCRQUCRSG.UI {
         
         private TABLA_CORREO_USUARIODataTable tableTABLA_CORREO_USUARIO;
         
-        private ConsultaUsuariosDataTable tableConsultaUsuarios;
-        
-        private global::System.Data.DataRelation relationTELEFONOS_USUARIOS;
-        
         private global::System.Data.DataRelation relationUSUARIOS_ROLES;
         
         private global::System.Data.DataRelation relationUSUARIO_CORREO;
-        
-        private global::System.Data.DataRelation relationUSUARIO_CORREO1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -81,9 +75,6 @@ namespace SCRQUCRSG.UI {
                 }
                 if ((ds.Tables["TABLA_CORREO_USUARIO"] != null)) {
                     base.Tables.Add(new TABLA_CORREO_USUARIODataTable(ds.Tables["TABLA_CORREO_USUARIO"]));
-                }
-                if ((ds.Tables["ConsultaUsuarios"] != null)) {
-                    base.Tables.Add(new ConsultaUsuariosDataTable(ds.Tables["ConsultaUsuarios"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -140,16 +131,6 @@ namespace SCRQUCRSG.UI {
         public TABLA_CORREO_USUARIODataTable TABLA_CORREO_USUARIO {
             get {
                 return this.tableTABLA_CORREO_USUARIO;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ConsultaUsuariosDataTable ConsultaUsuarios {
-            get {
-                return this.tableConsultaUsuarios;
             }
         }
         
@@ -232,9 +213,6 @@ namespace SCRQUCRSG.UI {
                 if ((ds.Tables["TABLA_CORREO_USUARIO"] != null)) {
                     base.Tables.Add(new TABLA_CORREO_USUARIODataTable(ds.Tables["TABLA_CORREO_USUARIO"]));
                 }
-                if ((ds.Tables["ConsultaUsuarios"] != null)) {
-                    base.Tables.Add(new ConsultaUsuariosDataTable(ds.Tables["ConsultaUsuarios"]));
-                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -292,16 +270,8 @@ namespace SCRQUCRSG.UI {
                     this.tableTABLA_CORREO_USUARIO.InitVars();
                 }
             }
-            this.tableConsultaUsuarios = ((ConsultaUsuariosDataTable)(base.Tables["ConsultaUsuarios"]));
-            if ((initTable == true)) {
-                if ((this.tableConsultaUsuarios != null)) {
-                    this.tableConsultaUsuarios.InitVars();
-                }
-            }
-            this.relationTELEFONOS_USUARIOS = this.Relations["TELEFONOS_USUARIOS"];
             this.relationUSUARIOS_ROLES = this.Relations["USUARIOS_ROLES"];
             this.relationUSUARIO_CORREO = this.Relations["USUARIO_CORREO"];
-            this.relationUSUARIO_CORREO1 = this.Relations["USUARIO_CORREO1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -320,12 +290,6 @@ namespace SCRQUCRSG.UI {
             base.Tables.Add(this.tableTABLA_ROLES_USUARIOS);
             this.tableTABLA_CORREO_USUARIO = new TABLA_CORREO_USUARIODataTable();
             base.Tables.Add(this.tableTABLA_CORREO_USUARIO);
-            this.tableConsultaUsuarios = new ConsultaUsuariosDataTable();
-            base.Tables.Add(this.tableConsultaUsuarios);
-            this.relationTELEFONOS_USUARIOS = new global::System.Data.DataRelation("TELEFONOS_USUARIOS", new global::System.Data.DataColumn[] {
-                        this.tableTABLA_USUARIO.IDUSUARIOColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTABLA_TELEFONO_USUARIOS.IDUSUARIOColumn}, false);
-            this.Relations.Add(this.relationTELEFONOS_USUARIOS);
             this.relationUSUARIOS_ROLES = new global::System.Data.DataRelation("USUARIOS_ROLES", new global::System.Data.DataColumn[] {
                         this.tableTABLA_ROLES_USUARIOS.IDROLUSUARIOColumn}, new global::System.Data.DataColumn[] {
                         this.tableTABLA_USUARIO.IDROLUSUARIOColumn}, false);
@@ -334,10 +298,6 @@ namespace SCRQUCRSG.UI {
                         this.tableTABLA_USUARIO.IDUSUARIOColumn}, new global::System.Data.DataColumn[] {
                         this.tableTABLA_CORREO_USUARIO.IDUSUARIOColumn}, false);
             this.Relations.Add(this.relationUSUARIO_CORREO);
-            this.relationUSUARIO_CORREO1 = new global::System.Data.DataRelation("USUARIO_CORREO1", new global::System.Data.DataColumn[] {
-                        this.tableTABLA_USUARIO.IDUSUARIOColumn}, new global::System.Data.DataColumn[] {
-                        this.tableConsultaUsuarios.IDUSUARIOColumn}, false);
-            this.Relations.Add(this.relationUSUARIO_CORREO1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -361,12 +321,6 @@ namespace SCRQUCRSG.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeTABLA_CORREO_USUARIO() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeConsultaUsuarios() {
             return false;
         }
         
@@ -436,9 +390,6 @@ namespace SCRQUCRSG.UI {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void TABLA_CORREO_USUARIORowChangeEventHandler(object sender, TABLA_CORREO_USUARIORowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ConsultaUsuariosRowChangeEventHandler(object sender, ConsultaUsuariosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -787,11 +738,17 @@ namespace SCRQUCRSG.UI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TABLA_TELEFONO_USUARIOSDataTable : global::System.Data.TypedTableBase<TABLA_TELEFONO_USUARIOSRow> {
             
-            private global::System.Data.DataColumn columnIDTELEFONOUSUARIO;
-            
-            private global::System.Data.DataColumn columnIDUSUARIO;
-            
             private global::System.Data.DataColumn columnNUMEROTELEFONO;
+            
+            private global::System.Data.DataColumn columnCEDULA;
+            
+            private global::System.Data.DataColumn columnNOMBRECOMPLETO;
+            
+            private global::System.Data.DataColumn columnUSUARIOLOGIN;
+            
+            private global::System.Data.DataColumn columnPASSWORDLOGIN;
+            
+            private global::System.Data.DataColumn columnNOMBREROL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -828,25 +785,49 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDTELEFONOUSUARIOColumn {
-                get {
-                    return this.columnIDTELEFONOUSUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDUSUARIOColumn {
-                get {
-                    return this.columnIDUSUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn NUMEROTELEFONOColumn {
                 get {
                     return this.columnNUMEROTELEFONO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CEDULAColumn {
+                get {
+                    return this.columnCEDULA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NOMBRECOMPLETOColumn {
+                get {
+                    return this.columnNOMBRECOMPLETO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USUARIOLOGINColumn {
+                get {
+                    return this.columnUSUARIOLOGIN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PASSWORDLOGINColumn {
+                get {
+                    return this.columnPASSWORDLOGIN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NOMBREROLColumn {
+                get {
+                    return this.columnNOMBREROL;
                 }
             }
             
@@ -887,25 +868,18 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_TELEFONO_USUARIOSRow AddTABLA_TELEFONO_USUARIOSRow(decimal IDTELEFONOUSUARIO, TABLA_USUARIORow parentTABLA_USUARIORowByTELEFONOS_USUARIOS, string NUMEROTELEFONO) {
+            public TABLA_TELEFONO_USUARIOSRow AddTABLA_TELEFONO_USUARIOSRow(string NUMEROTELEFONO, string CEDULA, string NOMBRECOMPLETO, string USUARIOLOGIN, string PASSWORDLOGIN, string NOMBREROL) {
                 TABLA_TELEFONO_USUARIOSRow rowTABLA_TELEFONO_USUARIOSRow = ((TABLA_TELEFONO_USUARIOSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        IDTELEFONOUSUARIO,
-                        null,
-                        NUMEROTELEFONO};
-                if ((parentTABLA_USUARIORowByTELEFONOS_USUARIOS != null)) {
-                    columnValuesArray[1] = parentTABLA_USUARIORowByTELEFONOS_USUARIOS[0];
-                }
+                        NUMEROTELEFONO,
+                        CEDULA,
+                        NOMBRECOMPLETO,
+                        USUARIOLOGIN,
+                        PASSWORDLOGIN,
+                        NOMBREROL};
                 rowTABLA_TELEFONO_USUARIOSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTABLA_TELEFONO_USUARIOSRow);
                 return rowTABLA_TELEFONO_USUARIOSRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_TELEFONO_USUARIOSRow FindByIDTELEFONOUSUARIO(decimal IDTELEFONOUSUARIO) {
-                return ((TABLA_TELEFONO_USUARIOSRow)(this.Rows.Find(new object[] {
-                            IDTELEFONOUSUARIO})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -925,27 +899,41 @@ namespace SCRQUCRSG.UI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnIDTELEFONOUSUARIO = base.Columns["IDTELEFONOUSUARIO"];
-                this.columnIDUSUARIO = base.Columns["IDUSUARIO"];
                 this.columnNUMEROTELEFONO = base.Columns["NUMEROTELEFONO"];
+                this.columnCEDULA = base.Columns["CEDULA"];
+                this.columnNOMBRECOMPLETO = base.Columns["NOMBRECOMPLETO"];
+                this.columnUSUARIOLOGIN = base.Columns["USUARIOLOGIN"];
+                this.columnPASSWORDLOGIN = base.Columns["PASSWORDLOGIN"];
+                this.columnNOMBREROL = base.Columns["NOMBREROL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnIDTELEFONOUSUARIO = new global::System.Data.DataColumn("IDTELEFONOUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDTELEFONOUSUARIO);
-                this.columnIDUSUARIO = new global::System.Data.DataColumn("IDUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDUSUARIO);
                 this.columnNUMEROTELEFONO = new global::System.Data.DataColumn("NUMEROTELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNUMEROTELEFONO);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnIDTELEFONOUSUARIO}, true));
-                this.columnIDTELEFONOUSUARIO.AllowDBNull = false;
-                this.columnIDTELEFONOUSUARIO.Unique = true;
-                this.columnIDUSUARIO.AllowDBNull = false;
+                this.columnCEDULA = new global::System.Data.DataColumn("CEDULA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEDULA);
+                this.columnNOMBRECOMPLETO = new global::System.Data.DataColumn("NOMBRECOMPLETO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBRECOMPLETO);
+                this.columnUSUARIOLOGIN = new global::System.Data.DataColumn("USUARIOLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSUARIOLOGIN);
+                this.columnPASSWORDLOGIN = new global::System.Data.DataColumn("PASSWORDLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPASSWORDLOGIN);
+                this.columnNOMBREROL = new global::System.Data.DataColumn("NOMBREROL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBREROL);
                 this.columnNUMEROTELEFONO.AllowDBNull = false;
                 this.columnNUMEROTELEFONO.MaxLength = 40;
+                this.columnCEDULA.AllowDBNull = false;
+                this.columnCEDULA.MaxLength = 50;
+                this.columnNOMBRECOMPLETO.AllowDBNull = false;
+                this.columnNOMBRECOMPLETO.MaxLength = 100;
+                this.columnUSUARIOLOGIN.AllowDBNull = false;
+                this.columnUSUARIOLOGIN.MaxLength = 100;
+                this.columnPASSWORDLOGIN.AllowDBNull = false;
+                this.columnPASSWORDLOGIN.MaxLength = 100;
+                this.columnNOMBREROL.AllowDBNull = false;
+                this.columnNOMBREROL.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1359,6 +1347,16 @@ namespace SCRQUCRSG.UI {
             
             private global::System.Data.DataColumn columnCORREO;
             
+            private global::System.Data.DataColumn columnCEDULA;
+            
+            private global::System.Data.DataColumn columnNOMBRECOMPLETO;
+            
+            private global::System.Data.DataColumn columnUSUARIOLOGIN;
+            
+            private global::System.Data.DataColumn columnPASSWORDLOGIN;
+            
+            private global::System.Data.DataColumn columnNOMBREROL;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TABLA_CORREO_USUARIODataTable() {
@@ -1418,6 +1416,46 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CEDULAColumn {
+                get {
+                    return this.columnCEDULA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NOMBRECOMPLETOColumn {
+                get {
+                    return this.columnNOMBRECOMPLETO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USUARIOLOGINColumn {
+                get {
+                    return this.columnUSUARIOLOGIN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PASSWORDLOGINColumn {
+                get {
+                    return this.columnPASSWORDLOGIN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NOMBREROLColumn {
+                get {
+                    return this.columnNOMBREROL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1453,12 +1491,17 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_CORREO_USUARIORow AddTABLA_CORREO_USUARIORow(decimal IDCORREOUSUARIO, TABLA_USUARIORow parentTABLA_USUARIORowByUSUARIO_CORREO, string CORREO) {
+            public TABLA_CORREO_USUARIORow AddTABLA_CORREO_USUARIORow(decimal IDCORREOUSUARIO, TABLA_USUARIORow parentTABLA_USUARIORowByUSUARIO_CORREO, string CORREO, string CEDULA, string NOMBRECOMPLETO, string USUARIOLOGIN, string PASSWORDLOGIN, string NOMBREROL) {
                 TABLA_CORREO_USUARIORow rowTABLA_CORREO_USUARIORow = ((TABLA_CORREO_USUARIORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDCORREOUSUARIO,
                         null,
-                        CORREO};
+                        CORREO,
+                        CEDULA,
+                        NOMBRECOMPLETO,
+                        USUARIOLOGIN,
+                        PASSWORDLOGIN,
+                        NOMBREROL};
                 if ((parentTABLA_USUARIORowByUSUARIO_CORREO != null)) {
                     columnValuesArray[1] = parentTABLA_USUARIORowByUSUARIO_CORREO[0];
                 }
@@ -1494,6 +1537,11 @@ namespace SCRQUCRSG.UI {
                 this.columnIDCORREOUSUARIO = base.Columns["IDCORREOUSUARIO"];
                 this.columnIDUSUARIO = base.Columns["IDUSUARIO"];
                 this.columnCORREO = base.Columns["CORREO"];
+                this.columnCEDULA = base.Columns["CEDULA"];
+                this.columnNOMBRECOMPLETO = base.Columns["NOMBRECOMPLETO"];
+                this.columnUSUARIOLOGIN = base.Columns["USUARIOLOGIN"];
+                this.columnPASSWORDLOGIN = base.Columns["PASSWORDLOGIN"];
+                this.columnNOMBREROL = base.Columns["NOMBREROL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1505,6 +1553,16 @@ namespace SCRQUCRSG.UI {
                 base.Columns.Add(this.columnIDUSUARIO);
                 this.columnCORREO = new global::System.Data.DataColumn("CORREO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCORREO);
+                this.columnCEDULA = new global::System.Data.DataColumn("CEDULA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEDULA);
+                this.columnNOMBRECOMPLETO = new global::System.Data.DataColumn("NOMBRECOMPLETO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBRECOMPLETO);
+                this.columnUSUARIOLOGIN = new global::System.Data.DataColumn("USUARIOLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSUARIOLOGIN);
+                this.columnPASSWORDLOGIN = new global::System.Data.DataColumn("PASSWORDLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPASSWORDLOGIN);
+                this.columnNOMBREROL = new global::System.Data.DataColumn("NOMBREROL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBREROL);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDCORREOUSUARIO}, true));
                 this.columnIDCORREOUSUARIO.AllowDBNull = false;
@@ -1512,6 +1570,16 @@ namespace SCRQUCRSG.UI {
                 this.columnIDUSUARIO.AllowDBNull = false;
                 this.columnCORREO.AllowDBNull = false;
                 this.columnCORREO.MaxLength = 60;
+                this.columnCEDULA.AllowDBNull = false;
+                this.columnCEDULA.MaxLength = 50;
+                this.columnNOMBRECOMPLETO.AllowDBNull = false;
+                this.columnNOMBRECOMPLETO.MaxLength = 100;
+                this.columnUSUARIOLOGIN.AllowDBNull = false;
+                this.columnUSUARIOLOGIN.MaxLength = 100;
+                this.columnPASSWORDLOGIN.AllowDBNull = false;
+                this.columnPASSWORDLOGIN.MaxLength = 100;
+                this.columnNOMBREROL.AllowDBNull = false;
+                this.columnNOMBREROL.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1598,399 +1666,6 @@ namespace SCRQUCRSG.UI {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "TABLA_CORREO_USUARIODataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ConsultaUsuariosDataTable : global::System.Data.TypedTableBase<ConsultaUsuariosRow> {
-            
-            private global::System.Data.DataColumn columnIDUSUARIO;
-            
-            private global::System.Data.DataColumn columnCEDULA;
-            
-            private global::System.Data.DataColumn columnNOMBRECOMPLETO;
-            
-            private global::System.Data.DataColumn columnUSUARIOLOGIN;
-            
-            private global::System.Data.DataColumn columnPASSWORDLOGIN;
-            
-            private global::System.Data.DataColumn columnNOMBREROL;
-            
-            private global::System.Data.DataColumn columnIDTELEFONOUSUARIO;
-            
-            private global::System.Data.DataColumn columnNUMEROTELEFONO;
-            
-            private global::System.Data.DataColumn columnIDCORREOUSUARIO;
-            
-            private global::System.Data.DataColumn columnCORREO;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosDataTable() {
-                this.TableName = "ConsultaUsuarios";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ConsultaUsuariosDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ConsultaUsuariosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDUSUARIOColumn {
-                get {
-                    return this.columnIDUSUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CEDULAColumn {
-                get {
-                    return this.columnCEDULA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NOMBRECOMPLETOColumn {
-                get {
-                    return this.columnNOMBRECOMPLETO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn USUARIOLOGINColumn {
-                get {
-                    return this.columnUSUARIOLOGIN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PASSWORDLOGINColumn {
-                get {
-                    return this.columnPASSWORDLOGIN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NOMBREROLColumn {
-                get {
-                    return this.columnNOMBREROL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDTELEFONOUSUARIOColumn {
-                get {
-                    return this.columnIDTELEFONOUSUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NUMEROTELEFONOColumn {
-                get {
-                    return this.columnNUMEROTELEFONO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDCORREOUSUARIOColumn {
-                get {
-                    return this.columnIDCORREOUSUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CORREOColumn {
-                get {
-                    return this.columnCORREO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRow this[int index] {
-                get {
-                    return ((ConsultaUsuariosRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ConsultaUsuariosRowChangeEventHandler ConsultaUsuariosRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ConsultaUsuariosRowChangeEventHandler ConsultaUsuariosRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ConsultaUsuariosRowChangeEventHandler ConsultaUsuariosRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ConsultaUsuariosRowChangeEventHandler ConsultaUsuariosRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddConsultaUsuariosRow(ConsultaUsuariosRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRow AddConsultaUsuariosRow(TABLA_USUARIORow parentTABLA_USUARIORowByUSUARIO_CORREO1, string CEDULA, string NOMBRECOMPLETO, string USUARIOLOGIN, string PASSWORDLOGIN, string NOMBREROL, decimal IDTELEFONOUSUARIO, string NUMEROTELEFONO, decimal IDCORREOUSUARIO, string CORREO) {
-                ConsultaUsuariosRow rowConsultaUsuariosRow = ((ConsultaUsuariosRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        CEDULA,
-                        NOMBRECOMPLETO,
-                        USUARIOLOGIN,
-                        PASSWORDLOGIN,
-                        NOMBREROL,
-                        IDTELEFONOUSUARIO,
-                        NUMEROTELEFONO,
-                        IDCORREOUSUARIO,
-                        CORREO};
-                if ((parentTABLA_USUARIORowByUSUARIO_CORREO1 != null)) {
-                    columnValuesArray[0] = parentTABLA_USUARIORowByUSUARIO_CORREO1[0];
-                }
-                rowConsultaUsuariosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowConsultaUsuariosRow);
-                return rowConsultaUsuariosRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ConsultaUsuariosDataTable cln = ((ConsultaUsuariosDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ConsultaUsuariosDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnIDUSUARIO = base.Columns["IDUSUARIO"];
-                this.columnCEDULA = base.Columns["CEDULA"];
-                this.columnNOMBRECOMPLETO = base.Columns["NOMBRECOMPLETO"];
-                this.columnUSUARIOLOGIN = base.Columns["USUARIOLOGIN"];
-                this.columnPASSWORDLOGIN = base.Columns["PASSWORDLOGIN"];
-                this.columnNOMBREROL = base.Columns["NOMBREROL"];
-                this.columnIDTELEFONOUSUARIO = base.Columns["IDTELEFONOUSUARIO"];
-                this.columnNUMEROTELEFONO = base.Columns["NUMEROTELEFONO"];
-                this.columnIDCORREOUSUARIO = base.Columns["IDCORREOUSUARIO"];
-                this.columnCORREO = base.Columns["CORREO"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnIDUSUARIO = new global::System.Data.DataColumn("IDUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDUSUARIO);
-                this.columnCEDULA = new global::System.Data.DataColumn("CEDULA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCEDULA);
-                this.columnNOMBRECOMPLETO = new global::System.Data.DataColumn("NOMBRECOMPLETO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOMBRECOMPLETO);
-                this.columnUSUARIOLOGIN = new global::System.Data.DataColumn("USUARIOLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUSUARIOLOGIN);
-                this.columnPASSWORDLOGIN = new global::System.Data.DataColumn("PASSWORDLOGIN", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPASSWORDLOGIN);
-                this.columnNOMBREROL = new global::System.Data.DataColumn("NOMBREROL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOMBREROL);
-                this.columnIDTELEFONOUSUARIO = new global::System.Data.DataColumn("IDTELEFONOUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDTELEFONOUSUARIO);
-                this.columnNUMEROTELEFONO = new global::System.Data.DataColumn("NUMEROTELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNUMEROTELEFONO);
-                this.columnIDCORREOUSUARIO = new global::System.Data.DataColumn("IDCORREOUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDCORREOUSUARIO);
-                this.columnCORREO = new global::System.Data.DataColumn("CORREO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCORREO);
-                this.columnIDUSUARIO.AllowDBNull = false;
-                this.columnCEDULA.AllowDBNull = false;
-                this.columnCEDULA.MaxLength = 50;
-                this.columnNOMBRECOMPLETO.AllowDBNull = false;
-                this.columnNOMBRECOMPLETO.MaxLength = 100;
-                this.columnUSUARIOLOGIN.AllowDBNull = false;
-                this.columnUSUARIOLOGIN.MaxLength = 100;
-                this.columnPASSWORDLOGIN.AllowDBNull = false;
-                this.columnPASSWORDLOGIN.MaxLength = 100;
-                this.columnNOMBREROL.AllowDBNull = false;
-                this.columnNOMBREROL.MaxLength = 50;
-                this.columnIDTELEFONOUSUARIO.AllowDBNull = false;
-                this.columnNUMEROTELEFONO.AllowDBNull = false;
-                this.columnNUMEROTELEFONO.MaxLength = 40;
-                this.columnIDCORREOUSUARIO.AllowDBNull = false;
-                this.columnCORREO.AllowDBNull = false;
-                this.columnCORREO.MaxLength = 60;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRow NewConsultaUsuariosRow() {
-                return ((ConsultaUsuariosRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ConsultaUsuariosRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ConsultaUsuariosRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ConsultaUsuariosRowChanged != null)) {
-                    this.ConsultaUsuariosRowChanged(this, new ConsultaUsuariosRowChangeEvent(((ConsultaUsuariosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ConsultaUsuariosRowChanging != null)) {
-                    this.ConsultaUsuariosRowChanging(this, new ConsultaUsuariosRowChangeEvent(((ConsultaUsuariosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ConsultaUsuariosRowDeleted != null)) {
-                    this.ConsultaUsuariosRowDeleted(this, new ConsultaUsuariosRowChangeEvent(((ConsultaUsuariosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ConsultaUsuariosRowDeleting != null)) {
-                    this.ConsultaUsuariosRowDeleting(this, new ConsultaUsuariosRowChangeEvent(((ConsultaUsuariosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveConsultaUsuariosRow(ConsultaUsuariosRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetMigracion ds = new DataSetMigracion();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ConsultaUsuariosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2124,34 +1799,12 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_TELEFONO_USUARIOSRow[] GetTABLA_TELEFONO_USUARIOSRows() {
-                if ((this.Table.ChildRelations["TELEFONOS_USUARIOS"] == null)) {
-                    return new TABLA_TELEFONO_USUARIOSRow[0];
-                }
-                else {
-                    return ((TABLA_TELEFONO_USUARIOSRow[])(base.GetChildRows(this.Table.ChildRelations["TELEFONOS_USUARIOS"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TABLA_CORREO_USUARIORow[] GetTABLA_CORREO_USUARIORows() {
                 if ((this.Table.ChildRelations["USUARIO_CORREO"] == null)) {
                     return new TABLA_CORREO_USUARIORow[0];
                 }
                 else {
                     return ((TABLA_CORREO_USUARIORow[])(base.GetChildRows(this.Table.ChildRelations["USUARIO_CORREO"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRow[] GetConsultaUsuariosRows() {
-                if ((this.Table.ChildRelations["USUARIO_CORREO1"] == null)) {
-                    return new ConsultaUsuariosRow[0];
-                }
-                else {
-                    return ((ConsultaUsuariosRow[])(base.GetChildRows(this.Table.ChildRelations["USUARIO_CORREO1"])));
                 }
             }
         }
@@ -2172,28 +1825,6 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal IDTELEFONOUSUARIO {
-                get {
-                    return ((decimal)(this[this.tableTABLA_TELEFONO_USUARIOS.IDTELEFONOUSUARIOColumn]));
-                }
-                set {
-                    this[this.tableTABLA_TELEFONO_USUARIOS.IDTELEFONOUSUARIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal IDUSUARIO {
-                get {
-                    return ((decimal)(this[this.tableTABLA_TELEFONO_USUARIOS.IDUSUARIOColumn]));
-                }
-                set {
-                    this[this.tableTABLA_TELEFONO_USUARIOS.IDUSUARIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NUMEROTELEFONO {
                 get {
                     return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.NUMEROTELEFONOColumn]));
@@ -2205,12 +1836,56 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_USUARIORow TABLA_USUARIORow {
+            public string CEDULA {
                 get {
-                    return ((TABLA_USUARIORow)(this.GetParentRow(this.Table.ParentRelations["TELEFONOS_USUARIOS"])));
+                    return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.CEDULAColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["TELEFONOS_USUARIOS"]);
+                    this[this.tableTABLA_TELEFONO_USUARIOS.CEDULAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NOMBRECOMPLETO {
+                get {
+                    return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.NOMBRECOMPLETOColumn]));
+                }
+                set {
+                    this[this.tableTABLA_TELEFONO_USUARIOS.NOMBRECOMPLETOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string USUARIOLOGIN {
+                get {
+                    return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.USUARIOLOGINColumn]));
+                }
+                set {
+                    this[this.tableTABLA_TELEFONO_USUARIOS.USUARIOLOGINColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PASSWORDLOGIN {
+                get {
+                    return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.PASSWORDLOGINColumn]));
+                }
+                set {
+                    this[this.tableTABLA_TELEFONO_USUARIOS.PASSWORDLOGINColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NOMBREROL {
+                get {
+                    return ((string)(this[this.tableTABLA_TELEFONO_USUARIOS.NOMBREROLColumn]));
+                }
+                set {
+                    this[this.tableTABLA_TELEFONO_USUARIOS.NOMBREROLColumn] = value;
                 }
             }
         }
@@ -2312,49 +1987,12 @@ namespace SCRQUCRSG.UI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TABLA_USUARIORow TABLA_USUARIORow {
-                get {
-                    return ((TABLA_USUARIORow)(this.GetParentRow(this.Table.ParentRelations["USUARIO_CORREO"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["USUARIO_CORREO"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ConsultaUsuariosRow : global::System.Data.DataRow {
-            
-            private ConsultaUsuariosDataTable tableConsultaUsuarios;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ConsultaUsuariosRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableConsultaUsuarios = ((ConsultaUsuariosDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal IDUSUARIO {
-                get {
-                    return ((decimal)(this[this.tableConsultaUsuarios.IDUSUARIOColumn]));
-                }
-                set {
-                    this[this.tableConsultaUsuarios.IDUSUARIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string CEDULA {
                 get {
-                    return ((string)(this[this.tableConsultaUsuarios.CEDULAColumn]));
+                    return ((string)(this[this.tableTABLA_CORREO_USUARIO.CEDULAColumn]));
                 }
                 set {
-                    this[this.tableConsultaUsuarios.CEDULAColumn] = value;
+                    this[this.tableTABLA_CORREO_USUARIO.CEDULAColumn] = value;
                 }
             }
             
@@ -2362,10 +2000,10 @@ namespace SCRQUCRSG.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NOMBRECOMPLETO {
                 get {
-                    return ((string)(this[this.tableConsultaUsuarios.NOMBRECOMPLETOColumn]));
+                    return ((string)(this[this.tableTABLA_CORREO_USUARIO.NOMBRECOMPLETOColumn]));
                 }
                 set {
-                    this[this.tableConsultaUsuarios.NOMBRECOMPLETOColumn] = value;
+                    this[this.tableTABLA_CORREO_USUARIO.NOMBRECOMPLETOColumn] = value;
                 }
             }
             
@@ -2373,10 +2011,10 @@ namespace SCRQUCRSG.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string USUARIOLOGIN {
                 get {
-                    return ((string)(this[this.tableConsultaUsuarios.USUARIOLOGINColumn]));
+                    return ((string)(this[this.tableTABLA_CORREO_USUARIO.USUARIOLOGINColumn]));
                 }
                 set {
-                    this[this.tableConsultaUsuarios.USUARIOLOGINColumn] = value;
+                    this[this.tableTABLA_CORREO_USUARIO.USUARIOLOGINColumn] = value;
                 }
             }
             
@@ -2384,10 +2022,10 @@ namespace SCRQUCRSG.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string PASSWORDLOGIN {
                 get {
-                    return ((string)(this[this.tableConsultaUsuarios.PASSWORDLOGINColumn]));
+                    return ((string)(this[this.tableTABLA_CORREO_USUARIO.PASSWORDLOGINColumn]));
                 }
                 set {
-                    this[this.tableConsultaUsuarios.PASSWORDLOGINColumn] = value;
+                    this[this.tableTABLA_CORREO_USUARIO.PASSWORDLOGINColumn] = value;
                 }
             }
             
@@ -2395,54 +2033,10 @@ namespace SCRQUCRSG.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NOMBREROL {
                 get {
-                    return ((string)(this[this.tableConsultaUsuarios.NOMBREROLColumn]));
+                    return ((string)(this[this.tableTABLA_CORREO_USUARIO.NOMBREROLColumn]));
                 }
                 set {
-                    this[this.tableConsultaUsuarios.NOMBREROLColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal IDTELEFONOUSUARIO {
-                get {
-                    return ((decimal)(this[this.tableConsultaUsuarios.IDTELEFONOUSUARIOColumn]));
-                }
-                set {
-                    this[this.tableConsultaUsuarios.IDTELEFONOUSUARIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NUMEROTELEFONO {
-                get {
-                    return ((string)(this[this.tableConsultaUsuarios.NUMEROTELEFONOColumn]));
-                }
-                set {
-                    this[this.tableConsultaUsuarios.NUMEROTELEFONOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal IDCORREOUSUARIO {
-                get {
-                    return ((decimal)(this[this.tableConsultaUsuarios.IDCORREOUSUARIOColumn]));
-                }
-                set {
-                    this[this.tableConsultaUsuarios.IDCORREOUSUARIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CORREO {
-                get {
-                    return ((string)(this[this.tableConsultaUsuarios.CORREOColumn]));
-                }
-                set {
-                    this[this.tableConsultaUsuarios.CORREOColumn] = value;
+                    this[this.tableTABLA_CORREO_USUARIO.NOMBREROLColumn] = value;
                 }
             }
             
@@ -2450,10 +2044,10 @@ namespace SCRQUCRSG.UI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TABLA_USUARIORow TABLA_USUARIORow {
                 get {
-                    return ((TABLA_USUARIORow)(this.GetParentRow(this.Table.ParentRelations["USUARIO_CORREO1"])));
+                    return ((TABLA_USUARIORow)(this.GetParentRow(this.Table.ParentRelations["USUARIO_CORREO"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["USUARIO_CORREO1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["USUARIO_CORREO"]);
                 }
             }
         }
@@ -2580,40 +2174,6 @@ namespace SCRQUCRSG.UI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TABLA_CORREO_USUARIORow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ConsultaUsuariosRowChangeEvent : global::System.EventArgs {
-            
-            private ConsultaUsuariosRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRowChangeEvent(ConsultaUsuariosRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ConsultaUsuariosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3332,123 +2892,13 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "TABLA_TELEFONO_USUARIOS";
-            tableMapping.ColumnMappings.Add("IDTELEFONOUSUARIO", "IDTELEFONOUSUARIO");
-            tableMapping.ColumnMappings.Add("IDUSUARIO", "IDUSUARIO");
             tableMapping.ColumnMappings.Add("NUMEROTELEFONO", "NUMEROTELEFONO");
+            tableMapping.ColumnMappings.Add("CEDULA", "CEDULA");
+            tableMapping.ColumnMappings.Add("NOMBRECOMPLETO", "NOMBRECOMPLETO");
+            tableMapping.ColumnMappings.Add("USUARIOLOGIN", "USUARIOLOGIN");
+            tableMapping.ColumnMappings.Add("PASSWORDLOGIN", "PASSWORDLOGIN");
+            tableMapping.ColumnMappings.Add("NOMBREROL", "NOMBREROL");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM \"MIGRACION\".\"TABLA_TELEFONO_USUARIOS\" WHERE ((\"IDTELEFONOUSUARIO\" = :" +
-                "Original_IDTELEFONOUSUARIO) AND (\"IDUSUARIO\" = :Original_IDUSUARIO) AND (\"NUMERO" +
-                "TELEFONO\" = :Original_NUMEROTELEFONO))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDTELEFONOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDTELEFONOUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_NUMEROTELEFONO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 40;
-            param.IsNullable = true;
-            param.SourceColumn = "NUMEROTELEFONO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"MIGRACION\".\"TABLA_TELEFONO_USUARIOS\" (\"IDTELEFONOUSUARIO\", \"IDUSUARI" +
-                "O\", \"NUMEROTELEFONO\") VALUES (:IDTELEFONOUSUARIO, :IDUSUARIO, :NUMEROTELEFONO)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDTELEFONOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDTELEFONOUSUARIO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "NUMEROTELEFONO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 40;
-            param.IsNullable = true;
-            param.SourceColumn = "NUMEROTELEFONO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""MIGRACION"".""TABLA_TELEFONO_USUARIOS"" SET ""IDTELEFONOUSUARIO"" = :IDTELEFONOUSUARIO, ""IDUSUARIO"" = :IDUSUARIO, ""NUMEROTELEFONO"" = :NUMEROTELEFONO WHERE ((""IDTELEFONOUSUARIO"" = :Original_IDTELEFONOUSUARIO) AND (""IDUSUARIO"" = :Original_IDUSUARIO) AND (""NUMEROTELEFONO"" = :Original_NUMEROTELEFONO))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDTELEFONOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDTELEFONOUSUARIO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "NUMEROTELEFONO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 40;
-            param.IsNullable = true;
-            param.SourceColumn = "NUMEROTELEFONO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDTELEFONOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDTELEFONOUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_NUMEROTELEFONO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 40;
-            param.IsNullable = true;
-            param.SourceColumn = "NUMEROTELEFONO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3464,8 +2914,10 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDTELEFONOUSUARIO, IDUSUARIO, NUMEROTELEFONO FROM MIGRACION.TABLA_TELEFONO" +
-                "_USUARIOS";
+            this._commandCollection[0].CommandText = @"SELECT        u.CEDULA, u.NOMBRECOMPLETO, u.USUARIOLOGIN, u.PASSWORDLOGIN, r.NOMBREROL, t.NUMEROTELEFONO
+FROM            MIGRACION.TABLA_TELEFONO_USUARIOS t INNER JOIN
+                         MIGRACION.TABLA_USUARIO u ON u.IDUSUARIO = t.IDUSUARIO INNER JOIN
+                         MIGRACION.TABLA_ROLES_USUARIOS r ON u.IDROLUSUARIO = r.IDROLUSUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3491,138 +2943,6 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable dataTable = new DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetMigracion dataSet) {
-            return this.Adapter.Update(dataSet, "TABLA_TELEFONO_USUARIOS");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_IDTELEFONOUSUARIO, decimal Original_IDUSUARIO, string Original_NUMEROTELEFONO) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_IDTELEFONOUSUARIO));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_IDUSUARIO));
-            if ((Original_NUMEROTELEFONO == null)) {
-                throw new global::System.ArgumentNullException("Original_NUMEROTELEFONO");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NUMEROTELEFONO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal IDTELEFONOUSUARIO, decimal IDUSUARIO, string NUMEROTELEFONO) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(IDTELEFONOUSUARIO));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(IDUSUARIO));
-            if ((NUMEROTELEFONO == null)) {
-                throw new global::System.ArgumentNullException("NUMEROTELEFONO");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(NUMEROTELEFONO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal IDTELEFONOUSUARIO, decimal IDUSUARIO, string NUMEROTELEFONO, decimal Original_IDTELEFONOUSUARIO, decimal Original_IDUSUARIO, string Original_NUMEROTELEFONO) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(IDTELEFONOUSUARIO));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(IDUSUARIO));
-            if ((NUMEROTELEFONO == null)) {
-                throw new global::System.ArgumentNullException("NUMEROTELEFONO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(NUMEROTELEFONO));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Original_IDTELEFONOUSUARIO));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_IDUSUARIO));
-            if ((Original_NUMEROTELEFONO == null)) {
-                throw new global::System.ArgumentNullException("Original_NUMEROTELEFONO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_NUMEROTELEFONO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal IDUSUARIO, string NUMEROTELEFONO, decimal Original_IDTELEFONOUSUARIO, decimal Original_IDUSUARIO, string Original_NUMEROTELEFONO) {
-            return this.Update(Original_IDTELEFONOUSUARIO, IDUSUARIO, NUMEROTELEFONO, Original_IDTELEFONOUSUARIO, Original_IDUSUARIO, Original_NUMEROTELEFONO);
         }
     }
     
@@ -4126,120 +3446,12 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             tableMapping.ColumnMappings.Add("IDCORREOUSUARIO", "IDCORREOUSUARIO");
             tableMapping.ColumnMappings.Add("IDUSUARIO", "IDUSUARIO");
             tableMapping.ColumnMappings.Add("CORREO", "CORREO");
+            tableMapping.ColumnMappings.Add("CEDULA", "CEDULA");
+            tableMapping.ColumnMappings.Add("NOMBRECOMPLETO", "NOMBRECOMPLETO");
+            tableMapping.ColumnMappings.Add("USUARIOLOGIN", "USUARIOLOGIN");
+            tableMapping.ColumnMappings.Add("PASSWORDLOGIN", "PASSWORDLOGIN");
+            tableMapping.ColumnMappings.Add("NOMBREROL", "NOMBREROL");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM \"MIGRACION\".\"TABLA_CORREO_USUARIO\" WHERE ((\"IDCORREOUSUARIO\" = :Origi" +
-                "nal_IDCORREOUSUARIO) AND (\"IDUSUARIO\" = :Original_IDUSUARIO) AND (\"CORREO\" = :Or" +
-                "iginal_CORREO))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDCORREOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDCORREOUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CORREO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 60;
-            param.IsNullable = true;
-            param.SourceColumn = "CORREO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"MIGRACION\".\"TABLA_CORREO_USUARIO\" (\"IDCORREOUSUARIO\", \"IDUSUARIO\", \"" +
-                "CORREO\") VALUES (:IDCORREOUSUARIO, :IDUSUARIO, :CORREO)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDCORREOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDCORREOUSUARIO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CORREO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 60;
-            param.IsNullable = true;
-            param.SourceColumn = "CORREO";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""MIGRACION"".""TABLA_CORREO_USUARIO"" SET ""IDCORREOUSUARIO"" = :IDCORREOUSUARIO, ""IDUSUARIO"" = :IDUSUARIO, ""CORREO"" = :CORREO WHERE ((""IDCORREOUSUARIO"" = :Original_IDCORREOUSUARIO) AND (""IDUSUARIO"" = :Original_IDUSUARIO) AND (""CORREO"" = :Original_CORREO))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDCORREOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDCORREOUSUARIO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CORREO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 60;
-            param.IsNullable = true;
-            param.SourceColumn = "CORREO";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDCORREOUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDCORREOUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_IDUSUARIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "IDUSUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CORREO";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 60;
-            param.IsNullable = true;
-            param.SourceColumn = "CORREO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4255,7 +3467,11 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDCORREOUSUARIO, IDUSUARIO, CORREO FROM MIGRACION.TABLA_CORREO_USUARIO";
+            this._commandCollection[0].CommandText = @"SELECT        MIGRACION.TABLA_CORREO_USUARIO.IDCORREOUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.CORREO, MIGRACION.TABLA_USUARIO.CEDULA, 
+                         MIGRACION.TABLA_USUARIO.NOMBRECOMPLETO, MIGRACION.TABLA_USUARIO.USUARIOLOGIN, MIGRACION.TABLA_USUARIO.PASSWORDLOGIN, MIGRACION.TABLA_ROLES_USUARIOS.NOMBREROL
+FROM            MIGRACION.TABLA_CORREO_USUARIO INNER JOIN
+                         MIGRACION.TABLA_USUARIO ON MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = MIGRACION.TABLA_USUARIO.IDUSUARIO INNER JOIN
+                         MIGRACION.TABLA_ROLES_USUARIOS ON MIGRACION.TABLA_USUARIO.IDROLUSUARIO = MIGRACION.TABLA_ROLES_USUARIOS.IDROLUSUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4282,321 +3498,6 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetMigracion.TABLA_CORREO_USUARIODataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetMigracion dataSet) {
-            return this.Adapter.Update(dataSet, "TABLA_CORREO_USUARIO");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_IDCORREOUSUARIO, decimal Original_IDUSUARIO, string Original_CORREO) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_IDCORREOUSUARIO));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_IDUSUARIO));
-            if ((Original_CORREO == null)) {
-                throw new global::System.ArgumentNullException("Original_CORREO");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CORREO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal IDCORREOUSUARIO, decimal IDUSUARIO, string CORREO) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(IDCORREOUSUARIO));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(IDUSUARIO));
-            if ((CORREO == null)) {
-                throw new global::System.ArgumentNullException("CORREO");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CORREO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal IDCORREOUSUARIO, decimal IDUSUARIO, string CORREO, decimal Original_IDCORREOUSUARIO, decimal Original_IDUSUARIO, string Original_CORREO) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(IDCORREOUSUARIO));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(IDUSUARIO));
-            if ((CORREO == null)) {
-                throw new global::System.ArgumentNullException("CORREO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CORREO));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Original_IDCORREOUSUARIO));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_IDUSUARIO));
-            if ((Original_CORREO == null)) {
-                throw new global::System.ArgumentNullException("Original_CORREO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_CORREO));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal IDUSUARIO, string CORREO, decimal Original_IDCORREOUSUARIO, decimal Original_IDUSUARIO, string Original_CORREO) {
-            return this.Update(Original_IDCORREOUSUARIO, IDUSUARIO, CORREO, Original_IDCORREOUSUARIO, Original_IDUSUARIO, Original_CORREO);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ConsultaUsuariosTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ConsultaUsuariosTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ConsultaUsuarios";
-            tableMapping.ColumnMappings.Add("IDUSUARIO", "IDUSUARIO");
-            tableMapping.ColumnMappings.Add("CEDULA", "CEDULA");
-            tableMapping.ColumnMappings.Add("NOMBRECOMPLETO", "NOMBRECOMPLETO");
-            tableMapping.ColumnMappings.Add("USUARIOLOGIN", "USUARIOLOGIN");
-            tableMapping.ColumnMappings.Add("PASSWORDLOGIN", "PASSWORDLOGIN");
-            tableMapping.ColumnMappings.Add("NOMBREROL", "NOMBREROL");
-            tableMapping.ColumnMappings.Add("IDTELEFONOUSUARIO", "IDTELEFONOUSUARIO");
-            tableMapping.ColumnMappings.Add("NUMEROTELEFONO", "NUMEROTELEFONO");
-            tableMapping.ColumnMappings.Add("IDCORREOUSUARIO", "IDCORREOUSUARIO");
-            tableMapping.ColumnMappings.Add("CORREO", "CORREO");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
-            this._connection.ConnectionString = global::SCRQUCRSG.UI.Properties.Settings.Default.ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
-            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        MIGRACION.TABLA_USUARIO.IDUSUARIO, MIGRACION.TABLA_USUARIO.CEDULA, MIGRACION.TABLA_USUARIO.NOMBRECOMPLETO, MIGRACION.TABLA_USUARIO.USUARIOLOGIN, 
-                         MIGRACION.TABLA_USUARIO.PASSWORDLOGIN, MIGRACION.TABLA_ROLES_USUARIOS.NOMBREROL, MIGRACION.TABLA_TELEFONO_USUARIOS.IDTELEFONOUSUARIO, 
-                  MIGRACION.TABLA_TELEFONO_USUARIOS.NUMEROTELEFONO, MIGRACION.TABLA_CORREO_USUARIO.IDCORREOUSUARIO, 
-                     MIGRACION.TABLA_CORREO_USUARIO.CORREO
-FROM            MIGRACION.TABLA_USUARIO INNER JOIN
-                         MIGRACION.TABLA_ROLES_USUARIOS ON MIGRACION.TABLA_USUARIO.IDROLUSUARIO = MIGRACION.TABLA_ROLES_USUARIOS.IDROLUSUARIO INNER JOIN
-                         MIGRACION.TABLA_TELEFONO_USUARIOS ON MIGRACION.TABLA_USUARIO.IDUSUARIO = MIGRACION.TABLA_TELEFONO_USUARIOS.IDUSUARIO INNER JOIN
-                         MIGRACION.TABLA_CORREO_USUARIO ON MIGRACION.TABLA_USUARIO.IDUSUARIO = MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetMigracion.ConsultaUsuariosDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetMigracion.ConsultaUsuariosDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetMigracion.ConsultaUsuariosDataTable dataTable = new DataSetMigracion.ConsultaUsuariosDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
     }
     
     /// <summary>
@@ -4613,11 +3514,7 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
         
         private TABLA_USUARIOTableAdapter _tABLA_USUARIOTableAdapter;
         
-        private TABLA_TELEFONO_USUARIOSTableAdapter _tABLA_TELEFONO_USUARIOSTableAdapter;
-        
         private TABLA_ROLES_USUARIOSTableAdapter _tABLA_ROLES_USUARIOSTableAdapter;
-        
-        private TABLA_CORREO_USUARIOTableAdapter _tABLA_CORREO_USUARIOTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4653,40 +3550,12 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TABLA_TELEFONO_USUARIOSTableAdapter TABLA_TELEFONO_USUARIOSTableAdapter {
-            get {
-                return this._tABLA_TELEFONO_USUARIOSTableAdapter;
-            }
-            set {
-                this._tABLA_TELEFONO_USUARIOSTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public TABLA_ROLES_USUARIOSTableAdapter TABLA_ROLES_USUARIOSTableAdapter {
             get {
                 return this._tABLA_ROLES_USUARIOSTableAdapter;
             }
             set {
                 this._tABLA_ROLES_USUARIOSTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public TABLA_CORREO_USUARIOTableAdapter TABLA_CORREO_USUARIOTableAdapter {
-            get {
-                return this._tABLA_CORREO_USUARIOTableAdapter;
-            }
-            set {
-                this._tABLA_CORREO_USUARIOTableAdapter = value;
             }
         }
         
@@ -4713,17 +3582,9 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                             && (this._tABLA_USUARIOTableAdapter.Connection != null))) {
                     return this._tABLA_USUARIOTableAdapter.Connection;
                 }
-                if (((this._tABLA_TELEFONO_USUARIOSTableAdapter != null) 
-                            && (this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection != null))) {
-                    return this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection;
-                }
                 if (((this._tABLA_ROLES_USUARIOSTableAdapter != null) 
                             && (this._tABLA_ROLES_USUARIOSTableAdapter.Connection != null))) {
                     return this._tABLA_ROLES_USUARIOSTableAdapter.Connection;
-                }
-                if (((this._tABLA_CORREO_USUARIOTableAdapter != null) 
-                            && (this._tABLA_CORREO_USUARIOTableAdapter.Connection != null))) {
-                    return this._tABLA_CORREO_USUARIOTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4741,13 +3602,7 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                 if ((this._tABLA_USUARIOTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._tABLA_ROLES_USUARIOSTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4779,24 +3634,6 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TABLA_TELEFONO_USUARIOS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tABLA_TELEFONO_USUARIOSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TABLA_CORREO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tABLA_CORREO_USUARIOTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -4823,22 +3660,6 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TABLA_TELEFONO_USUARIOS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tABLA_TELEFONO_USUARIOSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TABLA_CORREO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tABLA_CORREO_USUARIOTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -4849,22 +3670,6 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSetMigracion dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TABLA_CORREO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tABLA_CORREO_USUARIOTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TABLA_TELEFONO_USUARIOS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tABLA_TELEFONO_USUARIOSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tABLA_USUARIOTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TABLA_USUARIO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4925,18 +3730,8 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tABLA_TELEFONO_USUARIOSTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._tABLA_ROLES_USUARIOSTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tABLA_ROLES_USUARIOSTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._tABLA_CORREO_USUARIOTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tABLA_CORREO_USUARIOTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4981,15 +3776,6 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tABLA_USUARIOTableAdapter.Adapter);
                     }
                 }
-                if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                    revertConnections.Add(this._tABLA_TELEFONO_USUARIOSTableAdapter, this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection);
-                    this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
-                    this._tABLA_TELEFONO_USUARIOSTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
-                    if (this._tABLA_TELEFONO_USUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tABLA_TELEFONO_USUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tABLA_TELEFONO_USUARIOSTableAdapter.Adapter);
-                    }
-                }
                 if ((this._tABLA_ROLES_USUARIOSTableAdapter != null)) {
                     revertConnections.Add(this._tABLA_ROLES_USUARIOSTableAdapter, this._tABLA_ROLES_USUARIOSTableAdapter.Connection);
                     this._tABLA_ROLES_USUARIOSTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
@@ -4997,15 +3783,6 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                     if (this._tABLA_ROLES_USUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tABLA_ROLES_USUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tABLA_ROLES_USUARIOSTableAdapter.Adapter);
-                    }
-                }
-                if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
-                    revertConnections.Add(this._tABLA_CORREO_USUARIOTableAdapter, this._tABLA_CORREO_USUARIOTableAdapter.Connection);
-                    this._tABLA_CORREO_USUARIOTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
-                    this._tABLA_CORREO_USUARIOTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
-                    if (this._tABLA_CORREO_USUARIOTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tABLA_CORREO_USUARIOTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tABLA_CORREO_USUARIOTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5070,17 +3847,9 @@ FROM            MIGRACION.TABLA_USUARIO INNER JOIN
                     this._tABLA_USUARIOTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._tABLA_USUARIOTableAdapter]));
                     this._tABLA_USUARIOTableAdapter.Transaction = null;
                 }
-                if ((this._tABLA_TELEFONO_USUARIOSTableAdapter != null)) {
-                    this._tABLA_TELEFONO_USUARIOSTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._tABLA_TELEFONO_USUARIOSTableAdapter]));
-                    this._tABLA_TELEFONO_USUARIOSTableAdapter.Transaction = null;
-                }
                 if ((this._tABLA_ROLES_USUARIOSTableAdapter != null)) {
                     this._tABLA_ROLES_USUARIOSTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._tABLA_ROLES_USUARIOSTableAdapter]));
                     this._tABLA_ROLES_USUARIOSTableAdapter.Transaction = null;
-                }
-                if ((this._tABLA_CORREO_USUARIOTableAdapter != null)) {
-                    this._tABLA_CORREO_USUARIOTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._tABLA_CORREO_USUARIOTableAdapter]));
-                    this._tABLA_CORREO_USUARIOTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

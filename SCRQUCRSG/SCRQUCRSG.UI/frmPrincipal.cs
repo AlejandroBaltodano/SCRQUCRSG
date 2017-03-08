@@ -60,7 +60,7 @@ namespace SCRQUCRSG.UI
 
         private void reporteUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Reportes.FramesReportes.frmReporteUsuarios().ShowDialog();
+            new Reportes.FramesReportes.frmReporteTodosUsuarios().ShowDialog();
         }
     }
 }
