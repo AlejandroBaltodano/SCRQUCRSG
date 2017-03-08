@@ -78,6 +78,18 @@
     <Compile Include="Reportes\FramesReportes\frmReporteTodosUsuarios.Designer.cs">
       <DependentUpon>frmReporteTodosUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FramesReportes\frmReporteUsuarioEspecifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FramesReportes\frmReporteUsuarioEspecifico.Designer.cs">
+      <DependentUpon>frmReporteUsuarioEspecifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selecciones\frmSeleccionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selecciones\frmSeleccionarUsuario.Designer.cs">
+      <DependentUpon>frmSeleccionarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmCorreoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +139,14 @@
     <EmbeddedResource Include="Reportes\FramesReportes\frmReporteTodosUsuarios.resx">
       <DependentUpon>frmReporteTodosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FramesReportes\frmReporteUsuarioEspecifico.resx">
+      <DependentUpon>frmReporteUsuarioEspecifico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Informes\ReporteUsuarioEspecifico.rdlc" />
     <EmbeddedResource Include="Reportes\Informes\ReporteUsuarios.rdlc" />
+    <EmbeddedResource Include="Selecciones\frmSeleccionarUsuario.resx">
+      <DependentUpon>frmSeleccionarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmCorreoUsuario.resx">
       <DependentUpon>frmCorreoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,7 +218,9 @@
   <ItemGroup>
     <None Include="Resources\search16_h.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\book_add.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

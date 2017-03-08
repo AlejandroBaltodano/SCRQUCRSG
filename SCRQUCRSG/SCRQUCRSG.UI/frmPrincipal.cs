@@ -58,9 +58,14 @@ namespace SCRQUCRSG.UI
             new Usuarios.frmMantenimientoUsuarios(usuario).ShowDialog();
         }
 
-        private void reporteUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void todosLosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Reportes.FramesReportes.frmReporteTodosUsuarios().ShowDialog();
+        }
+
+        private void usuarioEspecificoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Reportes.FramesReportes.frmReporteUsuarioEspecifico().ShowDialog();
         }
     }
 }

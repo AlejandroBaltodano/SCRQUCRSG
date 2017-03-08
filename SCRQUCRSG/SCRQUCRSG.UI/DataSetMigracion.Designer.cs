@@ -2911,7 +2911,7 @@ namespace SCRQUCRSG.UI.DataSetMigracionTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        u.CEDULA, u.NOMBRECOMPLETO, u.USUARIOLOGIN, u.PASSWORDLOGIN, r.NOMBREROL, t.NUMEROTELEFONO
@@ -2919,6 +2919,22 @@ FROM            MIGRACION.TABLA_TELEFONO_USUARIOS t INNER JOIN
                          MIGRACION.TABLA_USUARIO u ON u.IDUSUARIO = t.IDUSUARIO INNER JOIN
                          MIGRACION.TABLA_ROLES_USUARIOS r ON u.IDROLUSUARIO = r.IDROLUSUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        u.CEDULA, u.NOMBRECOMPLETO, u.USUARIOLOGIN, u.PASSWORDLOGIN, r.NOMBREROL, t.NUMEROTELEFONO, t.IDUSUARIO
+FROM            MIGRACION.TABLA_TELEFONO_USUARIOS t INNER JOIN
+                         MIGRACION.TABLA_USUARIO u ON u.IDUSUARIO = t.IDUSUARIO INNER JOIN
+                         MIGRACION.TABLA_ROLES_USUARIOS r ON u.IDROLUSUARIO = r.IDROLUSUARIO
+WHERE        (t.IDUSUARIO = :IdUsuarioConsulta)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":IdUsuarioConsulta";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "IDUSUARIO";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2940,6 +2956,32 @@ FROM            MIGRACION.TABLA_TELEFONO_USUARIOS t INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable dataTable = new DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillTelefonoUsuario(DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable dataTable, decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable GetDataTelefonoUsuario(decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
             DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable dataTable = new DataSetMigracion.TABLA_TELEFONO_USUARIOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3464,7 +3506,7 @@ FROM            MIGRACION.TABLA_TELEFONO_USUARIOS t INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        MIGRACION.TABLA_CORREO_USUARIO.IDCORREOUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.CORREO, MIGRACION.TABLA_USUARIO.CEDULA, 
@@ -3473,6 +3515,23 @@ FROM            MIGRACION.TABLA_CORREO_USUARIO INNER JOIN
                          MIGRACION.TABLA_USUARIO ON MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = MIGRACION.TABLA_USUARIO.IDUSUARIO INNER JOIN
                          MIGRACION.TABLA_ROLES_USUARIOS ON MIGRACION.TABLA_USUARIO.IDROLUSUARIO = MIGRACION.TABLA_ROLES_USUARIOS.IDROLUSUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        MIGRACION.TABLA_CORREO_USUARIO.IDCORREOUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.CORREO, MIGRACION.TABLA_USUARIO.CEDULA, MIGRACION.TABLA_USUARIO.NOMBRECOMPLETO, 
+                         MIGRACION.TABLA_USUARIO.USUARIOLOGIN, MIGRACION.TABLA_USUARIO.PASSWORDLOGIN, MIGRACION.TABLA_ROLES_USUARIOS.NOMBREROL, MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO
+FROM            MIGRACION.TABLA_CORREO_USUARIO INNER JOIN
+                         MIGRACION.TABLA_USUARIO ON MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = MIGRACION.TABLA_USUARIO.IDUSUARIO INNER JOIN
+                         MIGRACION.TABLA_ROLES_USUARIOS ON MIGRACION.TABLA_USUARIO.IDROLUSUARIO = MIGRACION.TABLA_ROLES_USUARIOS.IDROLUSUARIO
+WHERE        (MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = :IdUsuarioConsulta)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":IdUsuarioConsulta";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "IDUSUARIO";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3494,6 +3553,32 @@ FROM            MIGRACION.TABLA_CORREO_USUARIO INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetMigracion.TABLA_CORREO_USUARIODataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetMigracion.TABLA_CORREO_USUARIODataTable dataTable = new DataSetMigracion.TABLA_CORREO_USUARIODataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillCorreoIdUsuario(DataSetMigracion.TABLA_CORREO_USUARIODataTable dataTable, decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetMigracion.TABLA_CORREO_USUARIODataTable GetDataCorreoIdUsuario(decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
             DataSetMigracion.TABLA_CORREO_USUARIODataTable dataTable = new DataSetMigracion.TABLA_CORREO_USUARIODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
