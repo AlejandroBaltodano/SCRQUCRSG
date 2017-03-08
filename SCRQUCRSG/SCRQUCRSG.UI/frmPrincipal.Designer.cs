@@ -32,6 +32,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,6 +54,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
+            this.generarReporteToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -73,6 +76,21 @@
             this.mantenimientoUsuariosToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.mantenimientoUsuariosToolStripMenuItem.Text = "Mantenimiento Usuarios";
             this.mantenimientoUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoUsuariosToolStripMenuItem_Click);
+            // 
+            // generarReporteToolStripMenuItem
+            // 
+            this.generarReporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteUsuariosToolStripMenuItem});
+            this.generarReporteToolStripMenuItem.Name = "generarReporteToolStripMenuItem";
+            this.generarReporteToolStripMenuItem.Size = new System.Drawing.Size(137, 25);
+            this.generarReporteToolStripMenuItem.Text = "Generar Reporte";
+            // 
+            // reporteUsuariosToolStripMenuItem
+            // 
+            this.reporteUsuariosToolStripMenuItem.Name = "reporteUsuariosToolStripMenuItem";
+            this.reporteUsuariosToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.reporteUsuariosToolStripMenuItem.Text = "Reporte Usuarios";
+            this.reporteUsuariosToolStripMenuItem.Click += new System.EventHandler(this.reporteUsuariosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -196,6 +214,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem generarReporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteUsuariosToolStripMenuItem;
     }
 }
 
