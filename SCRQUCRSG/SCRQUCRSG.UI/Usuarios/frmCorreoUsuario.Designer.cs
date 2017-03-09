@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCorreoUsuario));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnImprimirCorreosUnUsuario = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
@@ -51,27 +50,12 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnImprimirCorreosUnUsuario);
             this.panel2.Controls.Add(this.btnRegresar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 385);
+            this.panel2.Location = new System.Drawing.Point(0, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(723, 48);
             this.panel2.TabIndex = 3;
-            // 
-            // btnImprimirCorreosUnUsuario
-            // 
-            this.btnImprimirCorreosUnUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimirCorreosUnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnImprimirCorreosUnUsuario.Image = global::SCRQUCRSG.UI.Properties.Resources.page_save;
-            this.btnImprimirCorreosUnUsuario.Location = new System.Drawing.Point(420, 3);
-            this.btnImprimirCorreosUnUsuario.Name = "btnImprimirCorreosUnUsuario";
-            this.btnImprimirCorreosUnUsuario.Size = new System.Drawing.Size(297, 39);
-            this.btnImprimirCorreosUnUsuario.TabIndex = 2;
-            this.btnImprimirCorreosUnUsuario.Text = "Imprimir Correos de un Usuario";
-            this.btnImprimirCorreosUnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimirCorreosUnUsuario.UseVisualStyleBackColor = false;
-            this.btnImprimirCorreosUnUsuario.Click += new System.EventHandler(this.btnImprimirCorreosUnUsuario_Click);
             // 
             // btnRegresar
             // 
@@ -205,7 +189,7 @@
             this.dgvCorreosUsuario.Name = "dgvCorreosUsuario";
             this.dgvCorreosUsuario.ReadOnly = true;
             this.dgvCorreosUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCorreosUsuario.Size = new System.Drawing.Size(723, 209);
+            this.dgvCorreosUsuario.Size = new System.Drawing.Size(723, 215);
             this.dgvCorreosUsuario.TabIndex = 6;
             this.dgvCorreosUsuario.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvCorreosUsuario_MouseDoubleClick);
             // 
@@ -214,7 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(723, 433);
+            this.ClientSize = new System.Drawing.Size(723, 439);
             this.Controls.Add(this.dgvCorreosUsuario);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -240,7 +224,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnImprimirCorreosUnUsuario;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNombreUsuario;
