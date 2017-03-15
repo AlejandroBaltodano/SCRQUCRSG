@@ -72,5 +72,10 @@ namespace SCRQUCRSG.UI
         {
            new Prueba1.frmPrueba1().Show();
         }
+
+        private void prueba2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Prueba1.frmPrueba2().Show();
+        }
     }
 }

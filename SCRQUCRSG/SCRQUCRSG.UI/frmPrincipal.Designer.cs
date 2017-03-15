@@ -37,6 +37,8 @@
             this.todosLosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioEspecificoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prueba1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblNombreUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,8 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prueba1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prueba2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -120,6 +121,22 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // pruebasToolStripMenuItem
+            // 
+            this.pruebasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prueba1ToolStripMenuItem,
+            this.prueba2ToolStripMenuItem});
+            this.pruebasToolStripMenuItem.Name = "pruebasToolStripMenuItem";
+            this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(78, 25);
+            this.pruebasToolStripMenuItem.Text = "Pruebas";
+            // 
+            // prueba1ToolStripMenuItem
+            // 
+            this.prueba1ToolStripMenuItem.Name = "prueba1ToolStripMenuItem";
+            this.prueba1ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.prueba1ToolStripMenuItem.Text = "Prueba1";
+            this.prueba1ToolStripMenuItem.Click += new System.EventHandler(this.prueba1ToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,20 +207,12 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // pruebasToolStripMenuItem
+            // prueba2ToolStripMenuItem
             // 
-            this.pruebasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prueba1ToolStripMenuItem});
-            this.pruebasToolStripMenuItem.Name = "pruebasToolStripMenuItem";
-            this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(78, 25);
-            this.pruebasToolStripMenuItem.Text = "Pruebas";
-            // 
-            // prueba1ToolStripMenuItem
-            // 
-            this.prueba1ToolStripMenuItem.Name = "prueba1ToolStripMenuItem";
-            this.prueba1ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.prueba1ToolStripMenuItem.Text = "Prueba1";
-            this.prueba1ToolStripMenuItem.Click += new System.EventHandler(this.prueba1ToolStripMenuItem_Click);
+            this.prueba2ToolStripMenuItem.Name = "prueba2ToolStripMenuItem";
+            this.prueba2ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.prueba2ToolStripMenuItem.Text = "prueba2";
+            this.prueba2ToolStripMenuItem.Click += new System.EventHandler(this.prueba2ToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -256,6 +265,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioEspecificoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pruebasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prueba1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prueba2ToolStripMenuItem;
     }
 }
 
