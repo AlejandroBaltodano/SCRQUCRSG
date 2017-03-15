@@ -64,7 +64,7 @@
             this.btnRegresar.Image = global::SCRQUCRSG.UI.Properties.Resources.arrow_redo;
             this.btnRegresar.Location = new System.Drawing.Point(3, 3);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(715, 39);
+            this.btnRegresar.Size = new System.Drawing.Size(141, 39);
             this.btnRegresar.TabIndex = 1;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

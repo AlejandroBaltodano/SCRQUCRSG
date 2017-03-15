@@ -78,6 +78,12 @@
     <Compile Include="Prueba1\frmPrueba1.Designer.cs">
       <DependentUpon>frmPrueba1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prueba1\frmPrueba2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba1\frmPrueba2.Designer.cs">
+      <DependentUpon>frmPrueba2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FramesReportes\frmReporteTodosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="Prueba1\frmPrueba1.resx">
       <DependentUpon>frmPrueba1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prueba1\frmPrueba2.resx">
+      <DependentUpon>frmPrueba2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FramesReportes\frmReporteTodosUsuarios.resx">
       <DependentUpon>frmReporteTodosUsuarios.cs</DependentUpon>
