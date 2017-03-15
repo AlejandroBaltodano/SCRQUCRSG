@@ -19,7 +19,7 @@ namespace SCRQUCRSG.UI.Prueba1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esto es una prueba");
+            MessageBox.Show("Esto es prueba 1");
         }
     }
 }
