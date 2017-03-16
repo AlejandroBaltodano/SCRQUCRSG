@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
+"C:\Users\Creyes\Documents\Visual Studio 2015\Projects\SCRQUCRSG\SCRQUCRSG.UI\bin\Debug"
 /SCRQUCRSG/SCRQUCRSG.UI/obj/Debug
 /SCRQUCRSG/SCRQUCRSG.MODEL/bin/Debug
 /SCRQUCRSG/SCRQUCRSG.MODEL/obj/Debug
