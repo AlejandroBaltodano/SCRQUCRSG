@@ -3,12 +3,11 @@
 ################################################################################
 
 /SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
-/SCRQUCRSG/SCRQUCRSG.UI/bin/Debug
 /SCRQUCRSG/SCRQUCRSG.UI/obj/Debug
+/SCRQUCRSG/SCRQUCRSG.MODEL/bin/Debug
+/SCRQUCRSG/SCRQUCRSG.MODEL/obj/Debug
+/SCRQUCRSG/SCRQUCRSG.ACCESOADATOS/bin/Debug
+/SCRQUCRSG/SCRQUCRSG.ACCESOADATOS/obj/Debug
 *.suo
 *.user
 *.userosscache
